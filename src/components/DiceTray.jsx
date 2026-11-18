@@ -9,7 +9,6 @@ export default function DiceTray() {
   const [rollKey, setRollKey] = useState(0); // para reiniciar la animación
 
   function roll() {
-    // Resultado entre 1 y el número de caras
     const value = Math.floor(Math.random() * sides) + 1;
     setResult({ value, sides });
     setRollKey((k) => k + 1);
