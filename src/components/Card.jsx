@@ -1,6 +1,4 @@
-// Tarjeta genérica y reutilizable.
-// Recibe un título, una imagen opcional, una lista de estadísticas
-// [{ label, value }] y contenido extra (children).
+
 export default function Card({ title, subtitle, image, stats = [], children }) {
   return (
     <article className="card">
