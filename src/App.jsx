@@ -4,9 +4,9 @@ import LootGenerator from "./components/LootGenerator.jsx";
 import DiceTray from "./components/DiceTray.jsx";
 
 const TABS = [
-  { id: "bestiary", label: "🐉 Bestiario" },
-  { id: "loot", label: "💰 Botín" },
-  { id: "dice", label: "🎲 Dados" },
+  { id: "bestiary", label: " Bestiario" },
+  { id: "loot", label: " Botín" },
+  { id: "dice", label: " Dados" },
 ];
 
 export default function App() {
@@ -15,7 +15,7 @@ export default function App() {
   return (
     <div className="app">
       <header className="header">
-        <h1>⚔️ Asistente del Dungeon Master</h1>
+        <h1> Asistente del Dungeon Master</h1>
         <p>D&amp;D 5e</p>
       </header>
 
