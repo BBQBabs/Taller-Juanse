@@ -3,10 +3,8 @@ import Card from "./Card.jsx";
 
 const API = "https://www.dnd5eapi.co";
 
-// Número aleatorio entero entre min y max (ambos incluidos)
 const rand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
-// Monedas: crecen con el nivel de desafío (CR)
 function generateCoins(cr) {
   return {
     cp: rand(0, 20) * (cr + 1),
@@ -16,12 +14,10 @@ function generateCoins(cr) {
   };
 }
 
-// Cantidad de objetos: más nivel = más objetos
 function itemCount(cr) {
   return rand(1, 1 + Math.floor(cr / 5) + 1);
 }
 
-// Calidad: CR bajo -> equipo normal, CR medio -> mezcla, CR alto -> objetos mágicos
 function magicChance(cr) {
   if (cr < 5) return 0;
   if (cr < 11) return 0.4;
