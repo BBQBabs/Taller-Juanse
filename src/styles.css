@@ -1,0 +1,290 @@
+/* Mobile-first */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: #1b1424;
+  color: #f1e9ff;
+  overflow-x: hidden;
+}
+
+.app {
+  max-width: 1000px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.header {
+  text-align: center;
+  padding: 16px 12px 4px;
+}
+.header h1 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #ffd166;
+}
+.header p {
+  margin: 2px 0 0;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.tabs {
+  display: flex;
+  gap: 6px;
+  padding: 10px 12px;
+  position: sticky;
+  top: 0;
+  background: #1b1424;
+  z-index: 10;
+}
+.tab {
+  flex: 1;
+  padding: 10px 4px;
+  border: 1px solid #4b3a6b;
+  background: #2a1f3d;
+  color: #f1e9ff;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.tab.active {
+  background: #7b2cbf;
+  border-color: #c77dff;
+}
+
+.content {
+  padding: 0 12px 24px;
+}
+
+h2 {
+  color: #c77dff;
+  margin: 8px 0 12px;
+}
+h3 {
+  color: #ffd166;
+  margin: 18px 0 8px;
+}
+
+.input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #4b3a6b;
+  background: #2a1f3d;
+  color: #f1e9ff;
+  font-size: 1rem;
+}
+
+.range {
+  width: 100%;
+  margin: 8px 0 14px;
+}
+.label {
+  display: block;
+}
+
+.btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #7b2cbf;
+  color: white;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+.btn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+.btn.big {
+  width: 100%;
+  padding: 14px;
+  font-size: 1.1rem;
+  background: #e07a1f;
+  margin: 8px 0;
+}
+
+.msg {
+  opacity: 0.75;
+  font-size: 0.9rem;
+}
+.error {
+  color: #ff6b6b;
+}
+
+/* Tarjetas */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 12px;
+}
+.card {
+  background: #2a1f3d;
+  border: 1px solid #4b3a6b;
+  border-radius: 12px;
+  padding: 14px;
+}
+.card-img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #1b1424;
+}
+.card-title {
+  margin: 8px 0 2px;
+  color: #ffd166;
+}
+.card-subtitle {
+  margin: 0 0 8px;
+  font-size: 0.85rem;
+  opacity: 0.75;
+  text-transform: capitalize;
+}
+.card-stats {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.card-stats li {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-top: 1px solid #3c2f55;
+}
+.stat-label {
+  opacity: 0.8;
+}
+.stat-value {
+  font-weight: bold;
+  color: #c77dff;
+}
+
+.pager {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}
+
+/* Monedas */
+.coins {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.coin {
+  background: #2a1f3d;
+  border: 1px solid #4b3a6b;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: center;
+}
+.coin small {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: normal;
+  opacity: 0.7;
+}
+
+/* Dados */
+.dice-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.die {
+  flex: 1 1 60px;
+  padding: 12px 0;
+  border-radius: 10px;
+  border: 2px solid #4b3a6b;
+  background: #2a1f3d;
+  color: #f1e9ff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.die.active {
+  border-color: #ffd166;
+  background: #7b2cbf;
+}
+
+.result-box {
+  text-align: center;
+  padding: 20px 0;
+  min-height: 170px;
+}
+.result {
+  display: inline-block;
+  min-width: 130px;
+  padding: 16px 24px;
+  font-size: 4.5rem;
+  font-weight: bold;
+  color: #ffd166;
+  background: #2a1f3d;
+  border: 3px solid #c77dff;
+  border-radius: 20px;
+  animation: pop 0.45s ease;
+}
+.result.crit {
+  color: #5eff8a;
+  border-color: #5eff8a;
+}
+.result.fail {
+  color: #ff6b6b;
+  border-color: #ff6b6b;
+}
+.crit-text {
+  color: #5eff8a;
+  font-weight: bold;
+}
+.fail-text {
+  color: #ff6b6b;
+  font-weight: bold;
+}
+
+@keyframes pop {
+  0% {
+    transform: rotate(-180deg) scale(0.2);
+    opacity: 0;
+  }
+  70% {
+    transform: rotate(10deg) scale(1.15);
+  }
+  100% {
+    transform: rotate(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.history {
+  padding-left: 18px;
+  opacity: 0.85;
+}
+
+/* Pantallas más grandes */
+@media (min-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .coins {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .btn.big {
+    width: auto;
+    min-width: 260px;
+  }
+}
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
